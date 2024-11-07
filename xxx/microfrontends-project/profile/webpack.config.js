@@ -1,3 +1,4 @@
+
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
@@ -9,7 +10,7 @@ module.exports = {
       name: 'profile',
       filename: 'remoteEntry.js',
       exposes: {
-        './AppComponent': './src/app/app.component.ts',  // Expose ProfileComponent directly
+        './ProfileComponent': './src/app/profile/profile.component.ts',
       },
       shared: {
         "@angular/core": { singleton: true, strictVersion: true },

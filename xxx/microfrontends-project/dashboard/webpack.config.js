@@ -1,15 +1,16 @@
+
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4201/",
+    publicPath: "http://localhost:4202/",
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'profile',
+      name: 'dashboard',
       filename: 'remoteEntry.js',
       exposes: {
-        './AppComponent': './src/app/app.component.ts',  // Expose ProfileComponent directly
+        './DashboardComponent': './src/app/dashboard/dashboard.component.ts',
       },
       shared: {
         "@angular/core": { singleton: true, strictVersion: true },

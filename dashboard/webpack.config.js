@@ -6,7 +6,7 @@ module.exports = {
             name: 'dashboard',
             filename: 'remoteEntry.js',
             exposes: {
-                './DashboardModule': './src/app/dashboard/dashboard.module.ts',
+                './AppComponent': './src/app/app.component.ts',
             },
             shared: {
                 "@angular/core": { singleton: true, strictVersion: true },

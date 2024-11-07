@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 
 export const appRoutes: Routes = [
@@ -9,5 +10,5 @@ export const appRoutes: Routes = [
     path: 'dashboard',
     loadComponent: () => import('dashboard/DashboardComponent').then(m => m.DashboardComponent)
   },
-  { path: '', redirectTo: '/profile', pathMatch: 'full' }  // Optional default route
+  { path: '', redirectTo: '/profile', pathMatch: 'full' }
 ];
